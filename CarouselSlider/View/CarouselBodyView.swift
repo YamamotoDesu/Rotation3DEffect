@@ -21,12 +21,13 @@ struct CarouselBodyView: View {
                 Image("p\(index)")
                     .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                    .frame(width: size.width - 8, height: size.height / 1.2)
+                    .frame(width: size.width - 30, height: size.height / 1.2)
                     .cornerRadius(12)
                 
                 VStack{
                     
-                    VStack(alignment: .leading, spacing: 15.0) {
+                    VStack(alignment: .center, spacing: 15.0) {
+                        Spacer()
                         
                         Text("Human Integation Supervisor")
                             .font(.title2).bold()
@@ -93,9 +94,10 @@ struct CarouselBodyView: View {
                             }
                             .foregroundColor(.black)
                         }
-                        .padding(15)
+                        .padding(15.0)
                         .padding(.horizontal, 10)
                         .background(Color.white)
+                        .padding(.bottom, 50)
                         
                     }
                     .foregroundColor(.white)
@@ -105,7 +107,6 @@ struct CarouselBodyView: View {
                 }
                 .padding(20)
             }
-            .frame(width: size.width - 8, height: size.height / 1.0)
             .frame(width: size.width, height: size.height)
             .cornerRadius(12)
         }
